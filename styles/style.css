@@ -13,6 +13,9 @@ body {
     scroll-behavior: smooth;
 }
 
+.index-body {
+    background: var(--gray);
+}
 
 .container {
     background:var(--gray);
@@ -52,6 +55,9 @@ body {
     font-weight: 600;
     background: transparent;
     cursor: pointer;
+}
+.content-left {
+    max-width: 100%;
 }
 
 .main {
@@ -675,9 +681,20 @@ body {
         justify-content: center;
     }
     .content-left {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    .content-left h1 {
+        font-size: 1rem;
+    }
+    .fancy {
+        margin-top: -5em;
+    }
+    .content-right img {
+        margin-top: 1em;
     }
 
     /* About */
