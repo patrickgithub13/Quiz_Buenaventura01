@@ -108,7 +108,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background: var(--dark-blue);
-    padding: 1.5em;
+    padding: 1.3em;
     position: fixed;
     top: 0;
     left: 0;
@@ -146,6 +146,55 @@ body {
 .navbar .nav-items a:hover {
     color: var(--brown);
 }
+
+/* Hamburger Menu Styles */
+#sidebar {
+    width: 0;
+    height: 100%;
+    background-color: var(--dark-blue);
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 12;
+  }
+
+  #sidebar img {
+    width: 50px;
+    position: relative;
+    margin-left: 15em;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--gray);
+    display: block;
+    transition: 0.3s;
+  }
+
+  #sidebar li {
+    margin: 2em 0;
+    text-transform: uppercase;
+    list-style: none;
+    color: var(--dark-blue);
+    padding: 0 2em;
+  }
+
+  #sidebar a:hover {
+    color: var(--brown);
+  }
+
+  #open-btn {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    top: -40px;
+    z-index: 10;
+    font-size: 1.5rem;
+    color: var(--white);
+  }
 
 /* Button */
 .fancy {
@@ -267,6 +316,7 @@ body {
 .astronaut {
     position: relative;
     height: 500px;
+    min-height: 300px;
 }
 
 #hero .content {
@@ -646,7 +696,12 @@ body {
     .navbar {
         margin-left: 0;
     }
-
+    .nav-links {
+        display: none;
+    }
+    #open-btn {
+        display: block;
+    }
 
     #about .content {
         align-items: center;
@@ -682,9 +737,6 @@ body {
     }
     .logo {
         font-size: 1rem;
-    }
-    .nav-links {
-        display: none;
     }
     .content {
         flex-direction: column;
