@@ -16,8 +16,8 @@ body {
 
 .container {
     background:var(--gray);
-    width: 100%;
-    height: 100vh;
+    max-width: 100%;
+    height: 100svh;
     padding: 2em 6em;
     position: relative;
 }
@@ -27,6 +27,7 @@ body {
     position: relative;
     justify-content: space-around;
     align-items: center;
+    max-width: 100%;
 }
 .content h1 {
     width: 12em;
@@ -651,17 +652,24 @@ body {
     }
 }
 
-@media  (max-width: 430px) {
+@media  (max-width: 840px) {
+    .astronaut {
+        display: none;
+    }
     .logo {
         font-size: 1rem;
-    }
-    .quote {
-        font-size: 1rem;
-        text-align: center;
     }
     .nav-links {
         display: none;
     }
+}
+
+@media  (max-width: 430px) {
+    .quote {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
     .content {
         flex-direction: column;
         justify-content: center;
@@ -670,9 +678,6 @@ body {
         justify-content: center;
         align-items: center;
         text-align: center;
-    }
-    .astronaut {
-        display: none;
     }
 
     /* About */
@@ -710,4 +715,6 @@ body {
     .social-card{
         width: 400px;
     }
+
 }
+
